@@ -240,7 +240,7 @@ h1, h2, h3, h4 {
 }
 
 .status-scheduled { color: var(--text-tertiary); }
-.status-live { color: var(--accent-red); font-weight: 700; }
+.status-live { color: var(--accent-green); font-weight: 700; }
 .status-final { color: var(--text-secondary); }
 
 .teams-container {
