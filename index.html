@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB Premium Scoreboard</title>
+    <meta name="description" content="Real-time MLB Spring Training Scoreboard">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="top-nav">
+            <div class="nav-content">
+                <div class="logo-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Major_League_Baseball_logo.svg" alt="MLB Logo" class="main-logo" />
+                    <h1 class="logo-text">MLB Scoreboard</h1>
+                </div>
+                
+                <div class="controls-container">
+                    <div class="date-picker-wrapper">
+                        <label for="game-date" class="sr-only">Select Date</label>
+                        <input type="date" id="game-date" class="date-picker input-premium" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="status-bar">
+                <h2 id="current-date-display" class="date-display">Today's Games</h2>
+                <div class="live-indicator">
+                    <span class="pulsing-dot"></span>
+                    <span class="live-text" id="last-updated">Live</span>
+                </div>
+            </div>
+
+            <div id="loading-state" class="state-container hidden">
+                <div class="spinner"></div>
+                <p>Loading games...</p>
+            </div>
+
+            <div id="empty-state" class="state-container hidden">
+                <div class="empty-icon">📅</div>
+                <p>No games scheduled for this date.</p>
+            </div>
+
+            <div id="games-grid" class="games-grid">
+                <!-- Game cards will be dynamically injected here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
